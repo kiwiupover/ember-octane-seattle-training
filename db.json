@@ -1,6 +1,12 @@
 {
   "teams": [
     {
+      "id": "outdoorsy",
+      "name": "Outdoorsy",
+      "order": 2,
+      "iconUrl": "https://avatars3.githubusercontent.com/u/9725809?s=200&v=4"
+    },
+    {
       "id": "linkedin",
       "name": "LinkedIn",
       "order": 2,
@@ -34,9 +40,9 @@
   "users": [
     {
       "id": 0,
-      "name": "Dilbert",
-      "username": "dilbert",
-      "iconUrl": "https://pbs.twimg.com/profile_images/631245346379689984/GqseXcd4_400x400.jpg"
+      "name": "Dave Laird",
+      "username": "kiwiupover",
+      "iconUrl": "https://pbs.twimg.com/profile_images/511773925/crash_hot2_400x400.jpg"
     },
     {
       "id": 1,
@@ -131,6 +137,18 @@
   ],
   "channels": [
     {
+      "id": "get-outside",
+      "name": "get outside",
+      "description": "Find what move you",
+      "teamId": "outdoorsy"
+    },
+    {
+      "id": "owner",
+      "name": "Become and owner",
+      "description": "Make some money",
+      "teamId": "outdoorsy"
+    },
+    {
       "id": "recruiting",
       "name": "recruiting",
       "description": "The Next Generation Of Recruiting. Find top talents today!",
@@ -169,6 +187,14 @@
     }
   ],
   "messages": [
+    {
+      "teamId": "outdoorsy",
+      "channelId": "get-outside",
+      "userId": 1,
+      "createdAt": "2019-04-21T17:48:33.421Z",
+      "body": "This is how I roll. It's the best ride in town",
+      "id": 55
+    },
     {
       "teamId": "li",
       "channelId": "compliments",
@@ -222,7 +248,9 @@
       "channelId": "general",
       "userId": 1,
       "body": "awqwdqwqwdq",
-      "enrichedBody": ["awqwdqwqwdq"],
+      "enrichedBody": [
+        "awqwdqwqwdq"
+      ],
       "createdAt": 1555872270175,
       "id": 14
     },
@@ -569,6 +597,14 @@
       "userId": "1",
       "createdAt": 1556683077121,
       "id": 57
+    },
+    {
+      "teamId": "li",
+      "channelId": "general",
+      "userId": 1,
+      "body": "Hi everyone!",
+      "createdAt": 1558571842258,
+      "id": 58
     }
   ]
 }
