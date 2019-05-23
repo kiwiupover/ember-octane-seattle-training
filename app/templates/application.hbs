@@ -1,17 +1,1 @@
-<TeamSelector />
-
-<TeamSidebar />
-
-<main class="flex-1 flex flex-col bg-white overflow-hidden channel">
-  
-  {{format-timestamp '05-18-2003'}}
-
-  <ChannelHeader @title="Wework" @description="We all work together" />
-
-  <div class="py-4 flex-1 overflow-y-scroll channel-messages-list" role="list">
-    <ChatMessage />
-
-  </div>
-
-  <ChannelFooter />
-</main>
+{{outlet}}
