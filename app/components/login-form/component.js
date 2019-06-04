@@ -2,10 +2,6 @@ import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
-function myDecorator(obj, propName) {
-  debugger;
-}
-
 export default class LoginFormComponent extends Component {
   
   @tracked
@@ -20,7 +16,6 @@ export default class LoginFormComponent extends Component {
   }
 
   /**
-   * 
    * @param {Event & { target: HTMLFormElement}} evt
    */
   @action

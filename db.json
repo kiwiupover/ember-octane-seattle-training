@@ -605,6 +605,14 @@
       "body": "Hi everyone!",
       "createdAt": 1558571842258,
       "id": 58
+    },
+    {
+      "teamId": "li",
+      "channelId": "general",
+      "userId": 1,
+      "body": "Hi everyone!",
+      "createdAt": 1558657348477,
+      "id": 59
     }
   ]
 }
