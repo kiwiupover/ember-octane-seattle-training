@@ -7,7 +7,8 @@
   "settings": {
     "workbench.colorCustomizations": {
       "tab.unfocusedActiveBorder": "#fff0"
-    }
+    },
+    "mocha.enabled": false
   },
   "extensions": {
     "recommendations": [
