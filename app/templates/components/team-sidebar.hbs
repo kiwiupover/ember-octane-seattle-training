@@ -45,11 +45,11 @@
   </nav>
 
   <footer class="mx-4 mb-2 text-white">
-    <LinkTo
-      @route="login"
+    <button
+      {{on 'click' this.auth.logout}}
       data-test-logout-button="true"
       class="text-white no-underline rounded bg-grey-dark hover:bg-red-darker p-2 team-sidebar__logout-button">
       Logout
-    </LinkTo>
+    </button>
   </footer>
 </section>
