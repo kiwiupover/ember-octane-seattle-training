@@ -41,7 +41,7 @@ Ember-CLI is the official Ember.js build tool. It handles things like:
 We can install ember-cli globally by running
 
 ```
-npm install -g ember-cli
+yarn global add ember-cli
 ```
 
 Now you should be able to run
