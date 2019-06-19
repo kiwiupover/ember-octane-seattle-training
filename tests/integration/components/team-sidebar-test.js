@@ -15,7 +15,16 @@ module('Integration | Component | team-sidebar', function(hooks) {
     const userId = 'lol';
     this.owner.lookup('service:auth').currentUserId = userId;
 
-    await render(hbs`<TeamSidebar />`);
+    this.set('model', {
+      name: 'Outdoorsy',
+      channels: [
+        {
+          name: 'general'
+        }
+      ]
+    });
+
+    await render(hbs`<TeamSidebar @team={{this.model}} />`);
 
     assert.deepEqual(
       this.element.textContent.trim().replace(/\s*\n+\s*/g, '\n').split('\n'),
