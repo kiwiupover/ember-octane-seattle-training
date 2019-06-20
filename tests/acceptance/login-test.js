@@ -17,6 +17,6 @@ module('Acceptance | login', function(hooks) {
 
     await click('[data-test-login-button]');
 
-    assert.equal(currentURL(), '/teams');
+    assert.ok(currentURL().startsWith('/teams'));
   });
 });

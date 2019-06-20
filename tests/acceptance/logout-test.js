@@ -15,7 +15,7 @@ module('Acceptance | logout', function(hooks) {
 
     await visit('/teams/outdoorsy');
 
-    assert.equal(currentURL(), '/teams/outdoorsy');
+    assert.ok(currentURL().startsWith('/teams/outdoorsy'));
 
     await click('[data-test-logout-button]');
 
