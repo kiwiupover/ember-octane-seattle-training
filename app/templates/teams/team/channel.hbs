@@ -1,11 +1,18 @@
-<main class="flex-1 flex flex-col bg-white overflow-hidden channel">
+<Providers::Messages @channel={{this.model}} as |messagesApi|>
+  <main class="flex-1 flex flex-col bg-white overflow-hidden channel"
+    {{did-insert messagesApi.loadMessages}}
+    {{did-update messagesApi.loadMessages this.model}}>
 
-  <ChannelHeader @title="Wework" @description="We all work together" />
+    <ChannelHeader
+      @title={{this.model.title}}
+      @description={{this.model.description}} />
 
-  <div class="py-4 flex-1 overflow-y-scroll channel-messages-list" role="list">
-    <ChatMessage />
+    <div class="py-4 flex-1 overflow-y-scroll channel-messages-list" role="list">
+      {{#each messagesApi.messages as |m|}}
+        <ChatMessage @message={{m}} />
+      {{/each}}
+    </div>
 
-  </div>
-
-  <ChannelFooter />
-</main>
+    <ChannelFooter />
+  </main>
+</Providers::Messages>
