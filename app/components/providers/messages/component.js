@@ -17,7 +17,7 @@ export default class ProvidersMessagesComponent extends Component {
   async createMessage(body) {
     const { channel } = this.args;
 
-    const resp = fetch(`/api/messages`, {
+    const resp = await fetch(`/api/messages`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -29,6 +29,10 @@ export default class ProvidersMessagesComponent extends Component {
         body
       })
     })
+
+    const newMessage = await resp.json();
+    const user = await (await fetch(`/api/users/${this.auth.currentUserId}`)).json();
+    this.messages = [...this.messages, {...newMessage, user}];
   }
 
   @action

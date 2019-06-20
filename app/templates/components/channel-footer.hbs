@@ -21,10 +21,12 @@
       {{on 'input' this.updateMessageBody}}
       type="text">
 
-    disabled={{this.isDisabled}}
     <button disabled={{this.isDisabled}}
       type="submit"
-      class="font-bold uppercase text-white border-teal-dark p-2 {{if this.isDisabled 'opacity-50 bg-grey-dark' 'bg-teal-dark'}}">
+      class="
+        font-bold uppercase text-white border-teal-dark p-2
+        {{if this.isDisabled 'opacity-50 bg-grey-dark' 'bg-teal-dark'}}
+      ">
       SEND
     </button>
   </form>

@@ -1,5 +1,6 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
 export default class ChannelFooterComponent extends Component {
 
@@ -10,12 +11,15 @@ export default class ChannelFooterComponent extends Component {
     return !this.body
   }
 
+  @action
   updateMessageBody(evt) {
-    evt.preventDefault();
     this.body = evt.target.value;
   }
 
-  onSubmitMessage() {
-
+  @action
+  async onSubmitMessage(evt) {
+    evt.preventDefault();
+    await this.args.createMessage(this.body);
+    this.body = '';
   }
 }
